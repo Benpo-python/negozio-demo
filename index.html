@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bottega Bellini — Cornici su misura e belle arti a Bologna</title>
+<meta name="description" content="Bottega Bellini a Bologna: cornici su misura, stampe d'arte, piccoli restauri e materiali per belle arti. Preventivo gratuito anche su WhatsApp.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Bottega Bellini","description":"Cornici su misura, stampe d'arte e piccoli restauri","address":{"@type":"PostalAddress","streetAddress":"Via del Pratello 21","addressLocality":"Bologna","postalCode":"40122","addressCountry":"IT"},"telephone":"+39 051 123 4567","openingHours":["Tu-Fr 09:30-13:00","Tu-Fr 15:30-19:30","Sa 09:30-13:00"]}
+</script>
+<style>
+  :root{
+    --accento:#7A2E3A; --accento-scuro:#5C2029; --oro:#C79A4B; --crema:#FAF7F2; --carta:#F0E9DE; --nero:#1F1B1A; --grigio:#6A625C; --verde:#25D366;
+    --font-t:"Fraunces",Georgia,serif; --font-b:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-b);color:var(--nero);background:var(--crema);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{font-family:var(--font-t);line-height:1.1;letter-spacing:-.01em}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6em}
+  .eyebrow{color:var(--accento);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin-bottom:.8em}
+  section{padding:72px 0}
+  .btn{display:inline-flex;align-items:center;gap:.5em;padding:.9em 1.5em;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  .btn-accento{background:var(--accento);color:#fff}
+  .btn-bianco{background:#fff;color:var(--nero);border:1.5px solid rgba(0,0,0,.1)}
+  .btn-wa{background:var(--verde);color:#fff}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(250,247,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:var(--font-t);font-weight:800;font-size:1.25rem;text-decoration:none}
+  .logo span{color:var(--accento)}
+  nav ul{display:flex;gap:1.5em;list-style:none}
+  nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--grigio)}
+  nav ul a:hover{color:var(--nero)}
+  .nav-cta{font-size:.9rem;padding:.6em 1.1em}
+  @media(max-width:720px){nav ul{display:none}.nav-cta{display:none}}
+
+  /* hero */
+  .hero{padding:80px 0 64px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:800;margin-bottom:.4em}
+  .hero h1 em{font-style:italic;color:var(--accento)}
+  .hero p{font-size:1.15rem;color:var(--grigio);max-width:44ch;margin-bottom:1.8em}
+  .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-info{margin-top:28px;display:flex;gap:24px;flex-wrap:wrap;font-size:.9rem;color:var(--grigio)}
+  .hero-info b{color:var(--nero);display:block}
+  .hero-img{position:relative;max-width:400px;margin:0 auto;width:100%}
+  .badge{position:absolute;right:-8px;bottom:18px;background:var(--nero);color:#fff;border-radius:999px;padding:.6em 1em;font-size:.85rem;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.25);white-space:nowrap}
+  @media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero-img{order:-1;max-width:190px}.badge{right:-50px;font-size:.78rem}.hero{padding-top:36px}}
+
+  /* quadri disegnati in CSS */
+  .quadro{aspect-ratio:4/5;padding:7%;background:linear-gradient(135deg,#D8B26A,#9C7432 45%,#E2C27F 55%,#8A6327);box-shadow:0 30px 60px -20px rgba(0,0,0,.4);border-radius:4px;transform:rotate(-3deg)}
+  .quadro .pp{width:100%;height:100%;background:#F4EFE6;padding:9%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+  .quadro .arte{width:100%;height:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1)}
+  .a1{background:linear-gradient(180deg,#F2C78B 0 38%,#E59A6A 38% 46%,#7FA6B8 46% 70%,#4D7A6B 70%)}
+  .a2{background:radial-gradient(circle at 70% 30%,#F4D06F 0 12%,transparent 12.5%),linear-gradient(160deg,#2E4057,#4F6D7A 55%,#C0D6DF)}
+  .a3{background:repeating-linear-gradient(90deg,#E8DCC8 0 18px,#D3C2A6 18px 20px)}
+  .a4{background:radial-gradient(circle at 35% 40%,#B5485B 0 18%,transparent 18.5%),radial-gradient(circle at 65% 60%,#E6A15C 0 14%,transparent 14.5%),#EFE6D6}
+  .a5{background:linear-gradient(135deg,#1F1B1A 0 50%,#C79A4B 50%)}
+  .a6{background:linear-gradient(180deg,#A9C4C2 0 55%,#6C8F7D 55% 75%,#3F5D4E 75%)}
+  .c-nero{background:linear-gradient(135deg,#3a3634,#121010 50%,#3a3634)}
+  .c-legno{background:linear-gradient(135deg,#B07A4A,#7A4E2A 50%,#B07A4A)}
+  .c-bianco{background:linear-gradient(135deg,#fff,#E3DED6 50%,#fff)}
+
+  /* chi siamo */
+  .chi{background:var(--carta)}
+  .chi .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .chi p{color:var(--grigio);margin-bottom:1em;font-size:1.05rem}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .stat{background:#fff;border-radius:16px;padding:20px 16px;text-align:center}
+  .stat b{font-family:var(--font-t);font-size:2rem;color:var(--accento);display:block;line-height:1}
+  .stat span{font-size:.8rem;color:var(--grigio)}
+  @media(max-width:720px){.chi .wrap{grid-template-columns:1fr}}
+
+  /* servizi */
+  .listino{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
+  .voce{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px dashed rgba(0,0,0,.15)}
+  .voce h3{font-size:1.1rem;margin-bottom:.2em}
+  .voce p{color:var(--grigio);font-size:.92rem}
+  .prezzo{font-family:var(--font-t);font-weight:800;font-size:1.1rem;white-space:nowrap}
+  .tag{display:inline-block;background:var(--accento);color:#fff;border-radius:6px;font-size:.68rem;padding:2px 7px;margin-left:6px;vertical-align:middle;letter-spacing:.05em}
+  .nota{margin-top:28px;color:var(--grigio);font-size:.9rem}
+  @media(max-width:720px){.listino{grid-template-columns:1fr}}
+
+  /* lavori */
+  .lavori{background:var(--carta)}
+  .galleria{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .lavoro .quadro{transform:none;box-shadow:0 18px 36px -18px rgba(0,0,0,.35)}
+  .lavoro p{margin-top:12px;font-size:.92rem;color:var(--grigio)}
+  .lavoro b{color:var(--nero);display:block;font-size:.98rem}
+  @media(max-width:720px){.galleria{grid-template-columns:1fr 1fr;gap:18px}}
+
+  /* come funziona */
+  .passi{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:p}
+  .passo{background:#fff;border-radius:18px;padding:24px;border:1px solid rgba(0,0,0,.06)}
+  .passo::before{counter-increment:p;content:counter(p);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accento);color:#fff;font-weight:700;margin-bottom:12px}
+  .passo h3{font-size:1.15rem;margin-bottom:.3em}
+  .passo p{color:var(--grigio);font-size:.95rem}
+  @media(max-width:720px){.passi{grid-template-columns:1fr}}
+
+  /* orari + recensioni */
+  .info{background:var(--nero);color:#fff}
+  .info .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:56px}
+  .info .eyebrow{color:var(--oro)}
+  .orari{list-style:none}
+  .orari li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .orari li span:last-child{font-weight:600;text-align:right}
+  .rev{display:grid;gap:14px}
+  .card{background:rgba(255,255,255,.07);border-radius:16px;padding:20px}
+  .card .stelle{color:var(--oro);letter-spacing:2px;font-size:.9rem}
+  .card p{margin:.5em 0;font-size:.98rem}
+  .card small{color:rgba(255,255,255,.6)}
+  @media(max-width:720px){.info .wrap{grid-template-columns:1fr}}
+
+  /* contatti */
+  .contatti .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .contatti p{color:var(--grigio);margin-bottom:1em}
+  .riga{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+  .riga .ic{width:40px;height:40px;border-radius:12px;background:var(--carta);display:grid;place-items:center;flex-shrink:0;font-size:1.1rem}
+  .riga b{display:block}
+  .riga a{color:var(--grigio);text-decoration:none}
+  .mappa{border-radius:20px;overflow:hidden;background:#E6E0D3;aspect-ratio:4/3;display:grid;place-items:center;text-align:center;padding:24px;
+    background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px);background-size:32px 32px}
+  .pin{font-size:3rem;line-height:1;margin-bottom:8px}
+  @media(max-width:720px){.contatti .wrap{grid-template-columns:1fr}}
+
+  footer{padding:32px 0 96px;text-align:center;color:var(--grigio);font-size:.85rem;border-top:1px solid rgba(0,0,0,.06)}
+  footer small{display:block;margin-top:6px;opacity:.8}
+
+  .wa-fixed{position:fixed;right:18px;bottom:18px;z-index:20;width:58px;height:58px;border-radius:50%;background:var(--verde);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);text-decoration:none}
+  .wa-fixed svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">Bottega <span>Bellini</span></a>
+    <ul>
+      <li><a href="#chi">Chi siamo</a></li>
+      <li><a href="#servizi">Servizi e prezzi</a></li>
+      <li><a href="#lavori">Lavori</a></li>
+      <li><a href="#contatti">Dove siamo</a></li>
+    </ul>
+    <a href="tel:+390511234567" class="btn btn-accento nav-cta">📞 Chiama</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Cornici su misura · Bologna centro</div>
+      <h1>La cornice giusta per <em>ogni ricordo</em></h1>
+      <p>Cornici fatte a mano in bottega, stampe d'arte e piccoli restauri. Portaci la tua foto, il quadro della nonna o il diploma: ti consigliamo noi, e in 5 giorni è pronto.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/393331234567?text=Ciao!%20Vorrei%20un%20preventivo%20per%20una%20cornice" class="btn btn-wa">💬 Preventivo su WhatsApp</a>
+        <a href="#servizi" class="btn btn-bianco">Servizi e prezzi</a>
+      </div>
+      <div class="hero-info">
+        <div><b>Oggi aperti</b>9:30–13:00 · 15:30–19:30</div>
+        <div><b>Preventivo</b>Gratis, anche da una foto</div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="quadro" role="img" aria-label="Quadro con cornice dorata"><div class="pp"><div class="arte a1"></div></div></div>
+      <div class="badge">⭐ 4,9 · 186 recensioni Google</div>
+    </div>
+  </div>
+</header>
+
+<section class="chi" id="chi">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Chi siamo</div>
+      <h2>Una bottega di quartiere, dal 1979</h2>
+      <p>Bottega Bellini l'ha aperta papà Giorgio in via del Pratello, con un banco da falegname e tre profili di cornice. Oggi i profili sono più di trecento, ma il lavoro si fa ancora a mano, uno per uno.</p>
+      <p>In bottega ci sono Elena e Tommaso: ti aiutano a scegliere colore, passe-partout e vetro, e ti dicono onestamente se una cornice costosa serve davvero o no.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>1979</b><span>dal primo giorno</span></div>
+      <div class="stat"><b>300+</b><span>profili di cornice</span></div>
+      <div class="stat"><b>5 gg</b><span>tempo medio</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="servizi">
+  <div class="wrap">
+    <div class="eyebrow">Servizi e prezzi</div>
+    <h2>Prezzi chiari, prima di iniziare</h2>
+    <div class="listino">
+      <div class="voce"><div><h3>Cornice su misura <span class="tag">LA PIÙ RICHIESTA</span></h3><p>Legno, laccata o dorata, con vetro e retro. Formato 30×40</p></div><div class="prezzo">da 35 €</div></div>
+      <div class="voce"><div><h3>Passe-partout</h3><p>Taglio a 45°, colori a scelta, anche doppio</p></div><div class="prezzo">da 12 €</div></div>
+      <div class="voce"><div><h3>Vetro antiriflesso</h3><p>Per foto e opere esposte alla luce</p></div><div class="prezzo">+ 15 €</div></div>
+      <div class="voce"><div><h3>Cornici per diplomi e lauree</h3><p>Pronte in giornata nei formati standard</p></div><div class="prezzo">da 25 €</div></div>
+      <div class="voce"><div><h3>Stampa d'arte (giclée)</h3><p>Su carta cotone o tela, da file o da foto</p></div><div class="prezzo">da 20 €</div></div>
+      <div class="voce"><div><h3>Montaggio su tela</h3><p>Telaio in legno, pronto da appendere</p></div><div class="prezzo">da 40 €</div></div>
+      <div class="voce"><div><h3>Restauro cornici antiche</h3><p>Pulizia, stuccature, doratura a foglia</p></div><div class="prezzo">su preventivo</div></div>
+      <div class="voce"><div><h3>Ritiro e consegna</h3><p>A domicilio in tutta Bologna</p></div><div class="prezzo">10 €</div></div>
+    </div>
+    <p class="nota">Il preventivo è sempre gratuito: mandaci una foto e le misure su WhatsApp e ti rispondiamo in giornata.</p>
+  </div>
+</section>
+
+<section class="lavori" id="lavori">
+  <div class="wrap">
+    <div class="eyebrow">I nostri lavori</div>
+    <h2>Qualche lavoro recente</h2>
+    <div class="galleria">
+      <div class="lavoro"><div class="quadro c-legno"><div class="pp"><div class="arte a2"></div></div></div><p><b>Acquerello di famiglia</b>Noce naturale e passe-partout avorio</p></div>
+      <div class="lavoro"><div class="quadro c-nero"><div class="pp"><div class="arte a5"></div></div></div><p><b>Stampa moderna</b>Profilo sottile nero, vetro antiriflesso</p></div>
+      <div class="lavoro"><div class="quadro"><div class="pp"><div class="arte a3"></div></div></div><p><b>Ricamo antico</b>Montato su lino, cornice dorata a foglia</p></div>
+      <div class="lavoro"><div class="quadro c-bianco"><div class="pp"><div class="arte a4"></div></div></div><p><b>Disegno di bambino</b>Laccata bianca, pronta in 2 giorni</p></div>
+      <div class="lavoro"><div class="quadro c-legno"><div class="pp"><div class="arte a6"></div></div></div><p><b>Foto di viaggio</b>Stampa su carta cotone + cornice</p></div>
+      <div class="lavoro"><div class="quadro"><div class="pp"><div class="arte a1"></div></div></div><p><b>Olio dell'800</b>Restauro della cornice originale</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="come">
+  <div class="wrap">
+    <div class="eyebrow">Come funziona</div>
+    <h2>Tre passi, nessuna sorpresa</h2>
+    <div class="passi">
+      <div class="passo"><h3>Mandaci una foto</h3><p>Su WhatsApp o passando in bottega, con le misure se le hai.</p></div>
+      <div class="passo"><h3>Ricevi il preventivo</h3><p>Ti proponiamo 2-3 soluzioni con il prezzo, in giornata.</p></div>
+      <div class="passo"><h3>Ritira in 5 giorni</h3><p>Oppure te la portiamo a casa noi, già pronta da appendere.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="orari">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Orari</div>
+      <h2>Quando trovarci</h2>
+      <ul class="orari">
+        <li><span>Lunedì</span><span>Chiuso</span></li>
+        <li><span>Martedì</span><span>9:30–13:00 · 15:30–19:30</span></li>
+        <li><span>Mercoledì</span><span>9:30–13:00 · 15:30–19:30</span></li>
+        <li><span>Giovedì</span><span>9:30–13:00 · 15:30–19:30</span></li>
+        <li><span>Venerdì</span><span>9:30–13:00 · 15:30–19:30</span></li>
+        <li><span>Sabato</span><span>9:30–13:00</span></li>
+        <li><span>Domenica</span><span>Chiuso</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">Dicono di noi</div>
+      <h2>4,9 su Google</h2>
+      <div class="rev">
+        <div class="card"><div class="stelle">★★★★★</div><p>"Ho portato una foto dei miei nonni tutta rovinata: me l'hanno ristampata e incorniciata, era come nuova."</p><small>Chiara B. · 3 settimane fa</small></div>
+        <div class="card"><div class="stelle">★★★★★</div><p>"Gentilissimi e onesti: mi hanno sconsigliato la cornice più cara perché non serviva. Tornerò di sicuro."</p><small>Marco L. · 1 mese fa</small></div>
+        <div class="card"><div class="stelle">★★★★★</div><p>"Preventivo su WhatsApp in un'ora, cornice pronta in 4 giorni. Comodissimo."</p><small>Silvia R. · 2 mesi fa</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contatti" id="contatti">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Dove siamo</div>
+      <h2>Vieni in bottega</h2>
+      <p>In centro, a due passi da Porta San Felice. Parcheggio in via Riva di Reno.</p>
+      <div class="riga"><div class="ic">📍</div><div><b>Indirizzo</b><a href="https://maps.google.com/?q=Via+del+Pratello+Bologna">Via del Pratello 21, 40122 Bologna</a></div></div>
+      <div class="riga"><div class="ic">📞</div><div><b>Telefono</b><a href="tel:+390511234567">051 123 4567</a></div></div>
+      <div class="riga"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/393331234567">333 123 4567</a></div></div>
+      <div class="riga"><div class="ic">📷</div><div><b>Instagram</b><a href="#">@bottegabellini</a></div></div>
+      <a href="https://maps.google.com/?q=Via+del+Pratello+Bologna" class="btn btn-accento" style="margin-top:8px">Apri in Google Maps</a>
+    </div>
+    <div class="mappa">
+      <div>
+        <div class="pin">📍</div>
+        <b>Via del Pratello 21</b><br>
+        <span style="color:var(--grigio);font-size:.9rem">Bologna centro · Porta San Felice a 3 min a piedi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Bottega Bellini · Via del Pratello 21, Bologna
+    <small>Sito di esempio: attività, recensioni e contatti sono inventati.</small>
+  </div>
+</footer>
+
+<a href="https://wa.me/393331234567?text=Ciao!%20Vorrei%20un%20preventivo%20per%20una%20cornice" class="wa-fixed" aria-label="Scrivici su WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.5.7.5 0 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4l-.5-.3-1.9-.9c-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.6-.4H9z"/></svg>
+</a>
+
+</body>
+</html>
