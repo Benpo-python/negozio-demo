@@ -136,8 +136,20 @@
   .wa-fixed{position:fixed;right:18px;bottom:18px;z-index:20;width:58px;height:58px;border-radius:50%;background:var(--verde);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.45);text-decoration:none}
   .wa-fixed svg{width:30px;height:30px;fill:#fff}
 </style>
+<style id="bnw-stile">
+.bnw-fascia{background:#15161A;color:#fff;font:400 13.5px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:9px 16px;letter-spacing:0}
+.bnw-fascia a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px;display:inline-block;padding:12px 6px;margin:-12px 0}
+.bnw-fascia a:focus-visible,.bnw-vel a:focus-visible{outline:3px solid #7fd3b0;outline-offset:2px}
+.bnw-vel{display:none;position:fixed;inset:0;z-index:2000;background:rgba(21,22,26,.6);align-items:center;justify-content:center;padding:20px;font:400 16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+.bnw-vel:target,.bnw-vel.aperto{display:flex}
+.bnw-box{background:#fff;color:#15161A;max-width:380px;width:100%;border-radius:20px;padding:26px 24px 20px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.bnw-box p{margin:0;font-size:17px;line-height:1.5}
+.bnw-cta{display:flex;align-items:center;justify-content:center;min-height:50px;margin-top:20px;border-radius:999px;background:#15161A;color:#fff;font-weight:600;text-decoration:none;text-align:center;padding:0 20px}
+.bnw-chiudi{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:6px;color:#4A4B51;text-decoration:underline;font-size:15px}
+</style>
 </head>
 <body>
+<div class="bnw-fascia">Sito di esempio realizzato da Bottega nel Web. Vuoi il tuo? <a href="https://benpo-python.github.io/bozza-sito-ufficiale/contatti/">Bozza gratis</a></div>
 
 <nav>
   <div class="wrap">
@@ -148,7 +160,7 @@
       <li><a href="#lavori">Lavori</a></li>
       <li><a href="#contatti">Dove siamo</a></li>
     </ul>
-    <a href="tel:+390511234567" class="btn btn-accento nav-cta">📞 Chiama</a>
+    <a href="#avviso-esempio" data-bnw="chiama" class="btn btn-accento nav-cta">📞 Chiama</a>
   </div>
 </nav>
 
@@ -159,7 +171,7 @@
       <h1>La cornice giusta per <em>ogni ricordo</em></h1>
       <p>Cornici fatte a mano in bottega, stampe d'arte e piccoli restauri. Portaci la tua foto, il quadro della nonna o il diploma: ti consigliamo noi, e in 5 giorni è pronto.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/393331234567?text=Ciao!%20Vorrei%20un%20preventivo%20per%20una%20cornice" class="btn btn-wa">💬 Preventivo su WhatsApp</a>
+        <a href="#avviso-esempio" data-bnw="whatsapp" class="btn btn-wa">💬 Preventivo su WhatsApp</a>
         <a href="#servizi" class="btn btn-bianco">Servizi e prezzi</a>
       </div>
       <div class="hero-info">
@@ -269,8 +281,8 @@
       <h2>Vieni in bottega</h2>
       <p>In centro, a due passi da Porta San Felice. Parcheggio in via Riva di Reno.</p>
       <div class="riga"><div class="ic">📍</div><div><b>Indirizzo</b><a href="https://maps.google.com/?q=Via+del+Pratello+Bologna">Via del Pratello 21, 40122 Bologna</a></div></div>
-      <div class="riga"><div class="ic">📞</div><div><b>Telefono</b><a href="tel:+390511234567">051 123 4567</a></div></div>
-      <div class="riga"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/393331234567">333 123 4567</a></div></div>
+      <div class="riga"><div class="ic">📞</div><div><b>Telefono</b><a href="#avviso-esempio" data-bnw="chiama">051 123 4567</a></div></div>
+      <div class="riga"><div class="ic">💬</div><div><b>WhatsApp</b><a href="#avviso-esempio" data-bnw="whatsapp">333 123 4567</a></div></div>
       <div class="riga"><div class="ic">📷</div><div><b>Instagram</b><a href="#">@bottegabellini</a></div></div>
       <a href="https://maps.google.com/?q=Via+del+Pratello+Bologna" class="btn btn-accento" style="margin-top:8px">Apri in Google Maps</a>
     </div>
@@ -290,9 +302,23 @@
   </div>
 </footer>
 
-<a href="https://wa.me/393331234567?text=Ciao!%20Vorrei%20un%20preventivo%20per%20una%20cornice" class="wa-fixed" aria-label="Scrivici su WhatsApp">
+<a href="#avviso-esempio" data-bnw="whatsapp" class="wa-fixed" aria-label="Scrivici su WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4.4c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.5.7.5 0 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4l-.5-.3-1.9-.9c-.3-.1-.5-.2-.7.2l-.9 1.1c-.2.2-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.4 0-.5l-.9-2c-.2-.5-.4-.4-.6-.4H9z"/></svg>
 </a>
 
+<div class="bnw-vel" id="avviso-esempio" role="dialog" aria-modal="true" aria-labelledby="bnw-t" tabindex="-1">
+<div class="bnw-box"><p id="bnw-t">Questo è un sito di esempio. Nel tuo sito, questo pulsante chiama (o apre WhatsApp con) il tuo numero.</p>
+<a class="bnw-cta" href="https://benpo-python.github.io/bozza-sito-ufficiale/contatti/">Chiedi la tua bozza gratis</a><a class="bnw-chiudi" href="#">Chiudi</a></div></div>
+<script id="bnw-script">
+(function(){var v=document.getElementById("avviso-esempio"),op=null;
+function chiudi(){v.classList.remove("aperto");document.body.style.overflow="";if(op){op.focus();op=null}}
+document.addEventListener("click",function(e){var a=e.target.closest("[data-bnw]");
+if(a){e.preventDefault();op=a;v.classList.add("aperto");document.body.style.overflow="hidden";v.querySelector(".bnw-cta").focus();return}
+if(v.classList.contains("aperto")&&(e.target===v||e.target.closest(".bnw-chiudi"))){e.preventDefault();chiudi()}});
+document.addEventListener("keydown",function(e){if(!v.classList.contains("aperto"))return;
+if(e.key==="Escape"){e.preventDefault();chiudi();return}
+if(e.key==="Tab"){var f=v.querySelectorAll("a"),p=f[0],u=f[f.length-1];
+if(e.shiftKey&&document.activeElement===p){e.preventDefault();u.focus()}else if(!e.shiftKey&&document.activeElement===u){e.preventDefault();p.focus()}}});})();
+</script>
 </body>
 </html>
